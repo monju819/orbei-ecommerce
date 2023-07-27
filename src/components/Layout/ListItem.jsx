@@ -1,8 +1,12 @@
 import React from 'react'
-
-const ListItem = ({item,className}) => {
+import { Link } from 'react-router-dom'
+const ListItem = ({item,className,href}) => {
   return (
-   <li className={className}>{item}</li>
+   <li className={className}>
+    <Link to={href}>
+    {item}
+    </Link>
+    </li>
   )
 }
 
