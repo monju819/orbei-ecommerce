@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "./components/Layout/navbar";
+// import Navbar from "./components/Layout/navbar";
 
 import {
   createBrowserRouter,
@@ -10,12 +10,14 @@ import {
 } from "react-router-dom";
 import RootLayout from "./components/Layout/RootLayout";
 import Home from "./pages/Home";
+import Shop from "./pages/Shop";
 
 const App = () => {
   let router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<RootLayout />}>
         <Route index element={<Home />}></Route>
+        <Route path="/shop" element={<Shop />}></Route>
       </Route>,
     ),
   );
